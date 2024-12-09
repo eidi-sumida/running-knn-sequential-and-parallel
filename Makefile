@@ -28,5 +28,5 @@ run: main_sequential main_parallel
 # Limpar arquivos gerados
 clean:
 	rm -f main_sequential main_parallel
-	rm -f resultados/*
-	rm -r graficos/*
+	find resultados/ -type f ! -name '.gitkeep' -delete
+	find graficos/ -type f ! -name '.gitkeep' -delete
